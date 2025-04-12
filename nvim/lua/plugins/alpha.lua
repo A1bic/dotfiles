@@ -1,0 +1,12 @@
+--return {
+--    'goolord/alpha-nvim',
+--    config = function ()
+--        require'alpha'.setup(require'alpha.themes.dashboard'.config)
+--    end
+--};
+--require'alpha-nvim'.setup {
+--  config = function()
+--    require'alpha'.setup(require'alpha.themes.dashboard'.config)
+--  end
+--}
+require'alpha'.setup(require'alpha.themes.dashboard'.config)
