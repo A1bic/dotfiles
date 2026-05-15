@@ -7,3 +7,4 @@ end
 
 SetColor()
 
+--vim.cmd.colorscheme("gruvbox")

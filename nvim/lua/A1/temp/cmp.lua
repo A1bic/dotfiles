@@ -26,14 +26,14 @@ cmp.setup({
         cmp.select_next_item()
       else
         fallback()
-      end
+      end 
     end, {"i", "s"}),
     ["<S-Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
       else
         fallback()
-      end
+      end 
     end, {"i", "s"})
   }),
   sources = cmp.config.sources({
@@ -80,6 +80,6 @@ cmp.setup.cmdline(':', {
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require('lspconfig')['clangd'].setup {
+vim.lsp.config('clangd', {
   capabilities = capabilities
-}
+})

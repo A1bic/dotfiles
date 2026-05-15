@@ -1,25 +1,18 @@
 -- Basic
-require('core.plugins')
-require('core.mappings')
-require('core.colors')
-require('core.configs')
+vim.g.mapleader = " "
+require('A1.core.plugins')
+require('A1.core.mappings')
+require('A1.core.configs')
+require('A1.core.colors')
 
---Plugins
-require('plugins.treesitter')
---require('plugins.neotree') 
-require('plugins.lsp') --language servers
-require('plugins.cmp') --autocompletion
-require('plugins.mason') --fast and simple installing lsp
-require('plugins.lualine')
-require('plugins.nvim-tree')
-require('plugins.alpha')
-
-require('plugins.gitmanager')
+-- vim.opt.backup = false
+-- vim.opt.writebackup = false
+-- vim.opt.backupcopy = "no"
 
 vim.diagnostic.config({
-  virtual_text = true,
-  signs = true,
-  underline = true,
+  virtual_text = true,  -- Показывает ошибки внутри кода
+  signs = true,         -- Включает значки ошибок в колонке слева
+  underline = true,     -- Подчеркивает ошибки
   float = {
     show_header = true,
     source = "always",
